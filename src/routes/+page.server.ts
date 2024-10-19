@@ -15,7 +15,7 @@ export async function load() {
   //   console.error(e)
   // }
 
-  const db = await Database.create('example.duckdb', OPEN_READONLY)
+  const db = await Database.create(process.cwd() + '/app/example.duckdb', OPEN_READONLY)
 
   const products = await db.all('select * from products')
 
