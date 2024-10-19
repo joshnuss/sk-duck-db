@@ -1,6 +1,6 @@
 import { Database } from 'duckdb-async'
 
-const db = await Database.create('example.duckdb')
+const db = await Database.create(':memory:')
 
 await db.run(
   'create or replace table products (id integer primary key, name string, price integer)'
