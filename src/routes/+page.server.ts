@@ -1,6 +1,7 @@
 import { Database, OPEN_READONLY } from 'duckdb-async'
 
 export async function load() {
+  console.log(process.cwd())
   const db = await Database.create('example.duckdb', OPEN_READONLY)
 
   const products = await db.all('select * from products')
