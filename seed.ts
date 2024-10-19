@@ -1,6 +1,6 @@
 import { Database } from 'duckdb-async'
 
-const db = await Database.create('example.duckdb')
+const db = await Database.create('static/example.duckdb')
 
 console.log('db:init')
 
