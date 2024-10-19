@@ -1,6 +1,12 @@
 import { Database } from 'duckdb-async'
+import path from 'node:path'
 
-const db = await Database.create('static/example.duckdb')
+const dir = process.env.VERCEL ? 'static' : ''
+const file = path.join(dir, 'example.duckdb')
+
+console.log(`db:create ${file}`)
+
+const db = await Database.create(file)
 
 console.log('db:init')
 

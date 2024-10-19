@@ -20,6 +20,9 @@ importers:
       '@types/eslint':
         specifier: ^9.6.0
         version: 9.6.1
+      '@types/node':
+        specifier: ^22.7.7
+        version: 22.7.7
       duckdb:
         specifier: ^1.1.1
         version: 1.1.1(encoding@0.1.13)
@@ -2118,7 +2121,6 @@ snapshots:
   '@types/node@22.7.7':
     dependencies:
       undici-types: 6.19.8
-    optional: true
 
   '@typescript-eslint/eslint-plugin@8.10.0(@typescript-eslint/parser@8.10.0(eslint@9.13.0)(typescript@5.6.3))(eslint@9.13.0)(typescript@5.6.3)':
     dependencies:
@@ -3272,8 +3274,7 @@ snapshots:
 
   typescript@5.6.3: {}
 
-  undici-types@6.19.8:
-    optional: true
+  undici-types@6.19.8: {}
 
   unique-filename@2.0.1:
     dependencies:
