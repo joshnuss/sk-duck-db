@@ -1,5 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>
-  Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a>
-   to read the documentation
-</p>
+<script lang="ts">
+  export let data
+</script>
+
+<h1>Products</h1>
+
+{#each data.products as product}
+  <article>
+    <h2>{product.name}</h2>
+    <p>${product.price / 100}</p>
+  </article>
+{/each}
