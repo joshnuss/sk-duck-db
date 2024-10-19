@@ -2,6 +2,8 @@ import { Database } from 'duckdb-async'
 
 const db = await Database.create(':memory:')
 
+console.log('loading data')
+
 await db.run(
   'create or replace table products (id integer primary key, name string, price integer)'
 )
