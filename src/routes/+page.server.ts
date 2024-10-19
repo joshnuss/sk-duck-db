@@ -7,7 +7,7 @@ export async function load() {
   const files = await fs.readdir(path.join(process.cwd(), 'usr'))
 
   files.forEach(file => {
-    console.log('/usr', file)
+    console.log('usr', file)
   })
 
   const db = await Database.create('example.duckdb', OPEN_READONLY)
