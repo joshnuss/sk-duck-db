@@ -4,16 +4,16 @@ import path from 'node:path'
 
 export async function load() {
   console.log('cwd', process.cwd())
-  try {
-    const usr = path.join(process.cwd(), 'usr')
-    const files = await fs.readdir(usr)
+  // try {
+  //   const usr = path.join(process.cwd(), 'usr')
+  //   const files = await fs.readdir(usr)
 
-    files.forEach(file => {
-      console.log(usr, file)
-    })
-  } catch (e) {
-    console.error(e)
-  }
+  //   files.forEach(file => {
+  //     console.log(usr, file)
+  //   })
+  // } catch (e) {
+  //   console.error(e)
+  // }
 
   const db = await Database.create('example.duckdb', OPEN_READONLY)
 
